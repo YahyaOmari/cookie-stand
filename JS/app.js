@@ -66,10 +66,15 @@ Places.prototype.display = function () {
 
 Places.prototype.renderTable = function () {
     // creating a new element
+    
+    var article = document.createElement('article');
+    parentElementTable.appendChild(article);
+
     var tr = document.createElement('tr');
     var th = document.createElement('th');
     th.textContent = this.location;
     tr.appendChild(th);
+
 
     var cookieSold = 0;
     var totalCookiesSold = 0;
@@ -86,8 +91,8 @@ Places.prototype.renderTable = function () {
 
     td = document.createElement('td');
     td.textContent = totalCookiesSold;
-    tr.appendChild(td);
     parentElementTable.appendChild(tr);
+    tr.appendChild(td);
 }
 function renderHeader() {
     var parentElementTable = document.getElementById("TotalSold");
@@ -110,27 +115,31 @@ function renderHours() {
     var table = document.createElement('table');
     article.appendChild(table);
     //head (hours)
-    var tableFirstRow = document.createElement('tr')
-    table.appendChild(tableFirstRow);
+    var firstTr = document.createElement('tr')
+    table.appendChild(firstTr);
 
     var emptyHeader = document.createElement('th')
     emptyHeader.textContent = ' ';
-    tableFirstRow.appendChild(emptyHeader);
+    firstTr.appendChild(emptyHeader);
 
     for (var i = 0; i < workHours.length; i++) {
         var header = document.createElement('th');
         header.textContent = workHours[i];
-        tableFirstRow.appendChild(header);
+        firstTr.appendChild(header);
     }
+    var article = document.createElement('article');
+    parentElementTable.appendChild(article);
+
     var dailyTotal = document.createElement('th');
+    article.appendChild(dailyTotal);
     dailyTotal.textContent - 'Daily Location Total';
-    tableFirstRow.appendChild(dailyTotal);
+    firstTr.appendChild(dailyTotal);
 }
 renderHeader();
 renderHours();
 seattlLocation.renderTable();
-tokyoLocation.renderTable();
-dubaiLocation.renderTable();
-parisLocation.renderTable();
-limaLocation.renderTable();
+// tokyoLocation.renderTable();
+// dubaiLocation.renderTable();
+// parisLocation.renderTable();
+// limaLocation.renderTable();
 
