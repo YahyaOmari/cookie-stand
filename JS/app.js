@@ -89,6 +89,45 @@ Places.prototype.renderTable = function () {
     tr.appendChild(td);
     parentElementTable.appendChild(tr);
 }
+function renderHeader() {
+    var parentElementTable = document.getElementById("TotalSold");
+
+    var article = document.createElement('article');
+    parentElementTable.appendChild(article);
+
+    var h2 = document.createElement('h2');
+    h2.textContent = 'Table of total sold';
+    article.appendChild(h2);
+
+}
+
+function renderHours() {
+    var parentElementTable = document.getElementById("TotalSold");
+
+    var article = document.createElement('article');
+    parentElementTable.appendChild(article);
+    //starting the table
+    var table = document.createElement('table');
+    article.appendChild(table);
+    //head (hours)
+    var tableFirstRow = document.createElement('tr')
+    table.appendChild(tableFirstRow);
+
+    var emptyHeader = document.createElement('th')
+    emptyHeader.textContent = ' ';
+    tableFirstRow.appendChild(emptyHeader);
+
+    for (var i = 0; i < workHours.length; i++) {
+        var header = document.createElement('th');
+        header.textContent = workHours[i];
+        tableFirstRow.appendChild(header);
+    }
+    var dailyTotal = document.createElement('th');
+    dailyTotal.textContent - 'Daily Location Total';
+    tableFirstRow.appendChild(dailyTotal);
+}
+renderHeader();
+renderHours();
 seattlLocation.renderTable();
 tokyoLocation.renderTable();
 dubaiLocation.renderTable();
