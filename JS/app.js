@@ -1,7 +1,6 @@
 'use strict';
 
 var workHours = ["6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"];
-var tableHead = ["city", "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "Daily Location Total"];
 var parentElement = document.getElementById("SalmonCookies");
 
 // Creating a constructors
@@ -25,7 +24,6 @@ var limaLocation = new Places('Lima: ', 2, 16, 4.6);
 Places.prototype.generateRandomNum = function () {
     return Math.floor(Math.random() * (this.max - this.min) + this.min);
 }
-//console.log(tokyoLocation.generateRandomNum());
 
 // calculating cookies sales per hour
 Places.prototype.cookiePerHour = function () {
@@ -67,6 +65,7 @@ Places.prototype.cookiePerHour = function () {
 
 var table = document.createElement('table');
 parentElement.appendChild(table);
+
 
 // This function will render the first row
 Places.prototype.createHeader = function(){
@@ -144,8 +143,6 @@ Places.prototype.renderCity = function () {
 }
 
 function total(){
-
-    // var footer = document.createElement('footer');
     
     var tr = document.createElement('tr');
     var th = document.createElement('th');
@@ -178,6 +175,5 @@ dubaiLocation.renderCity();
 parisLocation.renderCity();
 limaLocation.renderCity();
 
-
+// Total row
 total();
-console.log(totalTotal);
