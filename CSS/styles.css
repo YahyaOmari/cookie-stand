@@ -1,12 +1,13 @@
 
 header,main{
     background-color: rgb(4, 102, 102);
-    border: black solid 20px ;
-    padding: 35px;
+    padding: 40px;
 }
 body{
     background-color:rgb(228, 218, 218);
-    border: green solid 10px ;
+    border-right: coral solid 10px ;
+    border-top: coral solid 10px ;
+    border-left: coral solid 10px ;
 }
 
 li{
@@ -26,7 +27,7 @@ p{
 div img{
     margin: 25px;
 }
-a:hover{
+a::cue-region{
     
     color: rgb(255, 255, 255);  
     font-weight: bolder;

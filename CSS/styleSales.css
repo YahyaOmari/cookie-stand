@@ -1,0 +1,14 @@
+head{
+    background-color: lightcoral;
+}
+a:link{
+    display: inline-block;
+}
+form{
+    /* background-color:rgb(194, 174, 166); */
+    border: 20px;
+}
+body{
+    background-color: coral;
+}
+

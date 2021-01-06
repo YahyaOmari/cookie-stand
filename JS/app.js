@@ -184,17 +184,19 @@ var cookieForm = document.getElementById('cookieForm');
 cookieForm.addEventListener('submit', function (event){
 
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
 
 
     var locationCity = event.target.location.value;
-    console.log(event.target.location);
-    var minNumber = event.target.min.value;
-    var maxNumber = event.target.max.value;
-    var avgNumber = event.target.avgCookie.value;
+    // console.log(event.target.location);
+    var minNumber = event.target.minN.value;
+    var maxNumber = event.target.maxN.value;
+    var avgNumber = event.target.avgN.value;
 
     var newplace = new Places(locationCity, minNumber, maxNumber, avgNumber)
-    console.log(newplace);
+    // console.log(newplace);
     newplace.renderCity();
 
 });
+
+
