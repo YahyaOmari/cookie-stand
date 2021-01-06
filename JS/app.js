@@ -105,10 +105,9 @@ Places.prototype.createHeader = function(){
 
 
 var totalCookiePerC = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-var totalTotal = [0];
+var totalTotal = 0;
 
-var cookieSold = 0;
-var totalCookiesSold = 0;
+
 
 Places.prototype.renderCity = function () {
     
@@ -119,7 +118,8 @@ Places.prototype.renderCity = function () {
     th.textContent = this.location;
     tr.appendChild(th);
     
-
+    var cookieSold = 0;
+    var totalCookiesSold = 0;
 
     for (var i = 0; i < workHours.length; i++) {
         cookieSold = this.cookiePerHour();
@@ -139,8 +139,9 @@ Places.prototype.renderCity = function () {
     parentElement.appendChild(tr);
     tr.appendChild(td);
     table.appendChild(tr);
-}
 
+    totalTotal += totalCookiesSold;
+}
 
 function total(){
 
@@ -159,6 +160,11 @@ function total(){
         table.appendChild(tr);
     }
 
+    
+    var lastElement = document.createElement('lastElement');
+    lastElement.textContent = totalTotal;
+    tr.appendChild(lastElement);
+
 }
 
 
@@ -174,3 +180,4 @@ limaLocation.renderCity();
 
 
 total();
+console.log(totalTotal);
