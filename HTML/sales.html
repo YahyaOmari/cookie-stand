@@ -7,20 +7,27 @@
 </head>
 <body>
     <main>
-      <form>
+      <form id="cookieForm">
         <fieldset>
           <legend>Salmon Cookies: </legend>
-          <label for="NameLocation">Name Location</label>
-          <input type="text" name="location" id="location"> 
+
+          <label for="NameLocation">Name Location:</label>
+          <input type="text" name="location" id="locationCity" required> 
           <br>
-          <label for="Min">Min</label>
-          <input type="number" name="min" id="min"> 
+
+          <label for="Min">Min Number:</label>
+          <input type="number" name="min" id="minNumber" required> 
           <br>
-          <label for="Max">Max</label>
-          <input type="number" name="max" id="max">
+
+          <label for="Max">Max Number:</label>
+          <input type="number" name="max" id="maxNumber" required>
           <br>
-          <label for="Avg">Avg</label>
-          <input type="number" name="avg" id="avg">
+
+          <label for="Avg">Avg cookies:</label>
+          <input type="number" name="avg" id="avgNumber" required>
+          <br>
+
+          <input type="submit" value="Calculate">
         </fieldset>
       </form>
       <nav> <ul>

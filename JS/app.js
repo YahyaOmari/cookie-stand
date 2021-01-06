@@ -177,5 +177,24 @@ limaLocation.renderCity();
 
 // Total row
 total();
-var locations =[seattlLocation,tokyoLocation];
-console.log(locations);
+
+
+var cookieForm = document.getElementById('cookieForm');
+
+cookieForm.addEventListener('submit', function (event){
+
+    event.preventDefault();
+    console.log(event);
+
+
+    var locationCity = event.target.location.value;
+    console.log(event.target.location);
+    var minNumber = event.target.min.value;
+    var maxNumber = event.target.max.value;
+    var avgNumber = event.target.avgCookie.value;
+
+    var newplace = new Places(locationCity, minNumber, maxNumber, avgNumber)
+    console.log(newplace);
+    newplace.renderCity();
+
+});
