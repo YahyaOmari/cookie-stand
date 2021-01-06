@@ -9,7 +9,11 @@ body{
     border: green solid 10px ;
 }
 
-
+li{
+    display: inline;
+    font-size: larger;
+    font-weight: bolder;
+}
 h2 {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     margin: 25px;
@@ -23,8 +27,9 @@ div img{
     margin: 25px;
 }
 a:hover{
+
     
-    color: rgb(255, 0, 0);  
+    color: rgb(255, 255, 255);  
     font-weight: bolder;
     padding: 35px;
 
