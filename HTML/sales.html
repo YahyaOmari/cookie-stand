@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Sales</title>
+    <link rel="stylesheet" href="/CSS/styleSales.css">
+    <!-- <link rel="stylesheet" href="/CSS/reset.css"> -->
 </head>
 <body>
     <main>
-      <nav class="sales">
-        <ul>
-          <li><a href="./index.html" title="Home Page ">Home</a></li>
-        </ul>
-      </nav>
+      <form>
+        <fieldset>
+          <legend>Salmon Cookies: </legend>
+          <label for="NameLocation">Name Location</label>
+          <input type="text" name="location" id="location"> 
+          <br>
+          <label for="Min">Min</label>
+          <input type="number" name="min" id="min"> 
+          <br>
+          <label for="Max">Max</label>
+          <input type="number" name="max" id="max">
+          <br>
+          <label for="Avg">Avg</label>
+          <input type="number" name="avg" id="avg">
+        </fieldset>
+      </form>
+      <nav> <ul>
+          <li><a href="./index.html" title="Home Page ">Home</a></li> <br><br>
+        </ul></nav>
         <!-- <h2>Salmon Cookies</h2> -->
         <div id="SalmonCookies">
           <!-- generate this from js: -->
@@ -27,9 +43,6 @@
           <!-- <img src="img/frankie.jpeg" alt="" srcset=""> -->
         </div>
       </main>
-      <section id="TotalSold">
-        
-        </section>
       <footer>
       </footer>
       </main>

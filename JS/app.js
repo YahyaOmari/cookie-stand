@@ -177,3 +177,5 @@ limaLocation.renderCity();
 
 // Total row
 total();
+var locations =[seattlLocation,tokyoLocation];
+console.log(locations);
