@@ -1,6 +1,8 @@
 'use strict';
 
+
 var workHours = ["6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"];
+var totalLocation = [];
 var parentElement = document.getElementById("SalmonCookies");
 
 // Creating a constructors
@@ -11,6 +13,7 @@ function Places(location, min, max, avgCookie) {
     this.avgCookie = avgCookie;
     this.total = 0;
     this.cookieForHour = [];
+    totalLocation.push(this);
     
 }
 
@@ -70,16 +73,10 @@ parentElement.appendChild(table);
 // This function will render the first row
 Places.prototype.createHeader = function(){
 
-    //starting the table
-    // var article = document.createElement('article');
-    // table.appendChild(article);
+    //starting the table 
     //head (hours)
     var firstTr = document.createElement('tr')
     table.appendChild(firstTr);
-
-    // var emptyHeader = document.createElement('th')
-    // emptyHeader.textContent = ' ';
-    // firstTr.appendChild(emptyHeader);
 
     // printing space before the Hours [6AM-7PM]
     var emptyHeader = document.createElement('th');
@@ -189,13 +186,27 @@ cookieForm.addEventListener('submit', function (event){
 
     var locationCity = event.target.location.value;
     // console.log(event.target.location);
-    var minNumber = event.target.minN.value;
-    var maxNumber = event.target.maxN.value;
-    var avgNumber = event.target.avgN.value;
+    var minNumber = parseInt(event.target.minN.value);
+    var maxNumber = parseInt(event.target.maxN.value);
+    var avgNumber = parseFloat(event.target.avgN.value);
 
     var newplace = new Places(locationCity, minNumber, maxNumber, avgNumber)
     // console.log(newplace);
+    table.innerHTML= '';
+
+
+    seattlLocation.createHeader();
+
+    // Calculating 
+    seattlLocation.renderCity();
+    tokyoLocation.renderCity();
+    dubaiLocation.renderCity();
+    parisLocation.renderCity();
+    limaLocation.renderCity();
+    // 
     newplace.renderCity();
+    
+    total();
 
 });
 
