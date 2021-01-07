@@ -15,7 +15,6 @@ function Places(location, min, max, avgCookie) {
     this.avgCookie = avgCookie;
     this.total=0;
     totalLocation.push(this);
-    
 }
 
 var seattlLocation = new Places('Seattl: ', 23, 65, 6.3);
@@ -119,7 +118,6 @@ Places.prototype.renderCity = function () {
         tr.appendChild(td);
         totalCookiesSold += cookieSold;
     }
-
     td = document.createElement('td');
     td.textContent = totalCookiesSold;
 
@@ -153,12 +151,12 @@ function total(){
 
 seattlLocation.createHeader();
 
-// Calculating 
-seattlLocation.renderCity();
-tokyoLocation.renderCity();
-dubaiLocation.renderCity();
-parisLocation.renderCity();
-limaLocation.renderCity();
+function renderNewCity(){
+    for (var i=0; i<totalLocation.length;i++){
+        totalLocation[i].renderCity();
+    }
+}
+renderNewCity();
 
 // Total row
 total();
@@ -184,14 +182,7 @@ cookieForm.addEventListener('submit', function (event){
     seattlLocation.createHeader();
 
     // Calculating 
-    seattlLocation.renderCity();
-    tokyoLocation.renderCity();
-    dubaiLocation.renderCity();
-    parisLocation.renderCity();
-    limaLocation.renderCity();
-    // 
-    newplace.renderCity();
-    
+    renderNewCity()
     total();
 
 });
