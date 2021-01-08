@@ -1,14 +1,104 @@
-head{
-    background-color: lightcoral;
+body{
+    background-color: rgb(167, 39, 39);
 }
-a:link{
-    display: inline-block;
+header{
+    background-color: rgb(4, 102, 102);
+        text-align: center;
+
 }
+
+a{
+    padding: 35px;
+
+}
+
+a:visited {
+color: black;
+
+}
+a:hover {
+    color: whitesmoke;
+}
+
+a:active {
+    color: blue;
+}
+
 form{
-    /* background-color:rgb(194, 174, 166); */
+    text-align: center;
     border: 20px;
+    padding: 10px;
+}
+
+fieldset{
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-image: initial;
+}
+table {
+    text-align: center;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 10px;
+    border-color: grey;
 }
 body{
+    background-color: rgb(228, 218, 218);
+    border-right: coral solid 10px;
+    border-top: coral solid 10px;
+    border-left: coral solid 10px;
     background-color: coral;
 }
 
+footer{
+    text-align: center;
+    color:blue;
+    font:larger;
+    font-size: larger;
+    margin-bottom: 25px;
+}
+p{
+    font-style: oblique;
+    font-weight: bolder;
+}
+a{
+    text-align: left;
+    text-decoration: none;
+}
+
+hr{
+    height:2px;
+    border-width:0px;
+    color:rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+
+}
+
+
+
+table, td, th {
+    border: 1px solid black;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td {
+    text-align: center;
+}
+
+input {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(4, 102, 102);
+  }
