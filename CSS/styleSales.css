@@ -3,13 +3,14 @@ body{
 }
 header{
     background-color: rgb(4, 102, 102);
-        text-align: center;
-
+    text-align: center;
 }
 
 a{
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
     padding: 35px;
-
 }
 
 a:visited {
@@ -69,10 +70,6 @@ p{
     font-style: oblique;
     font-weight: bolder;
 }
-a{
-    text-align: left;
-    text-decoration: none;
-}
 
 hr{
     height:2px;
@@ -82,15 +79,17 @@ hr{
 
 }
 
-
-
 table, td, th {
     border: 1px solid black;
+    padding: 12px 15px;
+
 }
   
 table {
     border-collapse: collapse;
     width: 100%;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(3, 49, 250, 0.945);
 }
   
 td {
@@ -101,4 +100,8 @@ input {
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid rgb(4, 102, 102);
-  }
+}
+tr {
+    background-color: #009879;
+    color: #ffffff;
+}

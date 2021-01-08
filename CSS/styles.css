@@ -27,12 +27,21 @@ p{
 div img{
     margin: 25px;
 }
-a::cue-region{
-    
-    color: rgb(255, 255, 255);  
-    padding: 10px;
+h2{
+    font-weight: bolder;
+}
+p{
+    font-family: 'Roboto Slab', serif;
+
+}
+
+a{
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
     padding: 35px;
 }
+
 a:visited {
 color: black;
 
@@ -43,17 +52,4 @@ a:hover {
 
 a:active {
     color: blue;
-}
-
-
-a{
-    text-decoration: none;
-    padding: 5px;
-}
-h2{
-    font-weight: bolder;
-}
-p{
-    font-family: 'Roboto Slab', serif;
-
 }
