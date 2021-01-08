@@ -175,11 +175,14 @@ cookieForm.addEventListener('submit', function (event){
     var maxNumber = parseInt(event.target.maxN.value);
     var avgNumber = parseFloat(event.target.avgN.value);
 
-    var newplace = new Places(locationCity, minNumber, maxNumber, avgNumber)
+    var newplace = new Places(locationCity, minNumber, maxNumber, avgNumber);
+ 
     // console.log(newplace);
     table.innerHTML= '';
-
     seattlLocation.createHeader();
+    
+    totalCookiePerC = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    totalTotal = 0;
 
     // Calculating 
     renderNewCity()

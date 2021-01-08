@@ -30,8 +30,25 @@ div img{
 a::cue-region{
     
     color: rgb(255, 255, 255);  
-    font-weight: bolder;
+    padding: 10px;
     padding: 35px;
+}
+a:visited {
+color: black;
+
+}
+a:hover {
+    color: whitesmoke;
+}
+
+a:active {
+    color: blue;
+}
+
+
+a{
+    text-decoration: none;
+    padding: 5px;
 }
 h2{
     font-weight: bolder;
