@@ -3,7 +3,7 @@ header,main{
     background-color: rgb(4, 102, 102);
     padding: 40px;
 }
-body{
+body>main{
     background-color:rgb(228, 218, 218);
     border-right: coral solid 10px ;
     border-top: coral solid 10px ;

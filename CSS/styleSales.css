@@ -1,14 +1,36 @@
-head{
-    background-color: lightcoral;
+*{
+    background-color: rgb(167, 39, 39);
 }
-a:link{
-    display: inline-block;
+header{
+    /* padding: 30px; */
+    background-color: rgb(170, 12, 65);
+    text-align: center;
+
 }
+
+/* visited link */
+
+a:visited {
+
+color: black;
+
+}
+a:hover {
+
+    color: hotpink;
+}
+a:active {
+
+    color: blue;
+}
+
 form{
-    /* background-color:rgb(194, 174, 166); */
+
     border: 20px;
+    padding: 10px;
 }
 body{
+
     background-color: coral;
 }
 
