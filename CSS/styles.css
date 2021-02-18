@@ -1,15 +1,20 @@
 
-header,main{
+header{
     background-color: rgb(4, 102, 102);
-    border: black solid 20px ;
-    padding: 35px;
+    padding: 40px;
 }
 body{
     background-color:rgb(228, 218, 218);
-    border: green solid 10px ;
+    border-right: coral solid 10px ;
+    border-top: coral solid 10px ;
+    border-left: coral solid 10px ;
 }
 
-
+li{
+    display: inline;
+    font-size: larger;
+    font-weight: bolder;
+}
 h2 {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     margin: 25px;
@@ -22,10 +27,29 @@ p{
 div img{
     margin: 25px;
 }
-a:hover{
-    
-    color: rgb(255, 0, 0);  
+h2{
     font-weight: bolder;
-    padding: 35px;
+}
+p{
+    font-family: 'Roboto Slab', serif;
 
+}
+
+a{
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 35px;
+}
+
+a:visited {
+color: black;
+
+}
+a:hover {
+    color: whitesmoke;
+}
+
+a:active {
+    color: blue;
 }

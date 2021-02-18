@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Sales</title>
+    <link rel="stylesheet" href="/CSS/reset.css" />
+    <link rel="stylesheet" href="/CSS/styleSales.css">
 </head>
 <body>
+  <header>
+    <img src="https://raw.githubusercontent.com/LTUC/amman-201d12/main/class-08/lab-b/assets/chinook.jpg" width="550" height="150">
+  </header>
+  <nav>
+    <a href="./index.html" title="Home Page ">Click here to go back to HomePage</a></li> <br><br>
+    </nav>
+  <hr>
     <main>
+      <br><br>
+      <form id="cookieForm">
+        <fieldset>
+          <legend>Salmon Cookies: </legend>
+
+          <label for="NameLocation">Name Location:</label>
+          <input type="text" name="location" id="locationCity" required> 
+          <br>
+
+          <label for="Min">Min Number:</label>
+          <input type="number" name="minN" id="minNumber" min = "0" required> 
+          <br>
+
+          <label for="Max">Max Number:</label>
+          <input type="number" name="maxN" id="maxNumber" min= "1" required>
+          <br>
+
+          <label for="Avg">Avg cookies:</label>
+          <input type="number" name="avgN" id="avgNumber"  step="any" required>
+          <br>
+
+          <input type="submit" value="Calculate">
+        </fieldset>
+      </form>
+
+
         <!-- <h2>Salmon Cookies</h2> -->
         <div id="SalmonCookies">
           <!-- generate this from js: -->
@@ -14,6 +49,9 @@
             <ul>
               <li></li>
             </ul>
+            <ol>
+              <li></li>
+            </ol>
             <img>
           </article> -->
           <!-- <img src="img/frankie.jpeg" alt="" srcset=""> -->
@@ -24,4 +62,8 @@
       </main>
       <script src="/JS/app.js"></script>
 </body>
+<hr>
+<footer><br>
+  <p>Made by Yahya Omari!</p>
+</footer>
 </html>
